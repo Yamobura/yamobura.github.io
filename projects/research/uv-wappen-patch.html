@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lidiia — Projects</title>
+    <link rel="stylesheet" href="../../styles.css" />
+  </head>
+  <body>
+    <header class="container header">
+      <nav class="nav">
+        <a href="../index.html">About</a>
+<a href="../../projects/projects.html">Projects</a>      </nav>
+    </header>
+
+    <main class="container">
+      <!-- HERO -->
+      <section class="hero hero-small">
+        <p class="tag">Research</p>
+        <h2>Development of a Detachable UV Monitoring Wappen Patch: 
+Real-Time Sun Exposure Management
+</h2>
+        <p class="sub">
+
+         
+          <p><i>Poster presentation at ITMC2024
+Conference & Sustainable
+Smart Fiber Exhibition</i></p>
+          
+        </p>
+
+      </section>
+
+
+      <!-- ABSTRACT -->
+      <section class="section">
+        <div class="section-title">
+          <h2>Abstract</h2>
+        </div>
+
+        <div class="">
+          <p class="abstract">
+Ultraviolet (UV) radiation is essential for vitamin D synthesis but poses serious health risks when exposure is excessive, including skin damage and increased cancer risk. As outdoor activities increase, there is a growing need for practical and user-friendly solutions to monitor UV exposure in daily life. This study presents a detachable, wearable UV monitoring wappen patch designed to seamlessly integrate into everyday clothing and accessories.
+
+The system combines a low-power UV photodiode sensor with Bluetooth Low Energy (BLE) communication, a compact microcontroller, and a rechargeable lithium-polymer battery to provide real-time UV index monitoring via a mobile application. UV exposure data are classified into five risk levels, triggering personalized notifications and actionable health guidance. The patch was tested under diverse real-world conditions and attachment scenarios, demonstrating stable performance, durability, and ease of use.
+
+By minimizing user intervention and integrating naturally into daily wear, the proposed UV monitoring patch offers an effective approach to personalized sun exposure management. This research highlights the potential of wearable health technologies to support preventive care and reduce UV-related health risks through seamless, user-centered design.            </p>
+            </div>
+</section>
+
+
+      <!-- BACK -->
+      <section class="section">
+        <a class="btn secondary" href="../projects.html">← Back to Projects</a>
+      </section>
+
+      <footer class="footer">
+        <p>© 2026</span> Lidiia Khleborodova</p>
+      </footer>
+    </main>
+
+    <script>
+      const buttons = document.querySelectorAll(".switch-btn");
+      const sections = document.querySelectorAll(".project-section");
+
+      buttons.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          buttons.forEach((b) => b.classList.remove("active"));
+          sections.forEach((s) => s.classList.remove("active"));
+
+          btn.classList.add("active");
+          document.getElementById(btn.dataset.target).classList.add("active");
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lidiia — Projects</title>
+    <link rel="stylesheet" href="../../styles.css" />
+  </head>
+  <body>
+    <header class="container header">
+      <nav class="nav">
+        <a href="../index.html">About</a>
+<a href="../../projects/projects.html">Projects</a>      </nav>
+    </header>
+
+    <main class="container">
+      <!-- HERO -->
+      <section class="hero hero-small">
+        <p class="tag">Research</p>
+        <h2>Supporting Fashion Design Creative Process Through Human–AI Collaboration
+-Development of Digital Moodboard Inspired by Cinema- </h2>
+        <p class="sub">
+
+         
+          <p><i>Poster presentation at 2025학년 한국의류산업학회 춘계학술대회</i></p>
+          
+        </p>
+
+      </section>
+
+
+      <!-- ABSTRACT -->
+      <section class="section">
+        <div class="section-title">
+          <h2>Abstract</h2>
+        </div>
+
+        <div class="">
+          <p class="abstract">Cinema has long influenced fashion design by shaping visual language, mood, and atmosphere. This study explores how generative AI tools can support early-stage fashion ideation by transforming film screencaps into digital moodboards. Using films frequently referenced in fashion contexts—Blade Runner, In the Mood for Love, and Marie Antoinette—the research investigates how AI can curate, interpret, and expand visual inspiration.
+
+Color palettes were extracted from film imagery and used to retrieve related artworks and fashion references, while vision–language models generated descriptive keywords and AI-generated images reflecting each film’s aesthetic. The resulting moodboards demonstrated strong visual coherence and thematic consistency, translating cinematic atmospheres into actionable design direction.
+
+The findings suggest that AI can act as a creative collaborator rather than a replacement for designers, supporting interpretation, reducing manual search effort, and expanding visual exploration. While limitations remain in aesthetic accuracy and workflow integration, the study highlights AI’s potential in co-creative fashion design processes rooted in visual culture.
+            </p>
+            </div>
+</section>
+
+
+      <!-- BACK -->
+      <section class="section">
+        <a class="btn secondary" href="../projects.html">← Back to Projects</a>
+      </section>
+
+      <footer class="footer">
+        <p>© 2026</span> Lidiia Khleborodova</p>
+      </footer>
+    </main>
+
+    <script>
+      const buttons = document.querySelectorAll(".switch-btn");
+      const sections = document.querySelectorAll(".project-section");
+
+      buttons.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          buttons.forEach((b) => b.classList.remove("active"));
+          sections.forEach((s) => s.classList.remove("active"));
+
+          btn.classList.add("active");
+          document.getElementById(btn.dataset.target).classList.add("active");
+        });
+      });
+    </script>
+  </body>
+</html>

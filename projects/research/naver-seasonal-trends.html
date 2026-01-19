@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lidiia — Projects</title>
+    <link rel="stylesheet" href="../../styles.css" />
+  </head>
+  <body>
+    <header class="container header">
+      <nav class="nav">
+        <a href="../index.html">About</a>
+<a href="../../projects/projects.html">Projects</a>      </nav>
+    </header>
+
+    <main class="container">
+      <!-- HERO -->
+      <section class="hero hero-small">
+        <p class="tag">Research</p>
+        <h2>네이버 데이터랩을 활용한 계절별 옷 검색 트렌드와 날씨 요인 분석
+ (Analysis of Seasonal Clothing Search Trends and Weather Factors Using Naver Data Lab)
+ </h2>
+        <p class="sub">
+
+         
+          <p><i>Poster presentation at 2024학년 한국의류학회 추계학술대회</i></p>
+          
+        </p>
+
+      </section>
+
+
+      <!-- ABSTRACT -->
+      <section class="section">
+        <div class="section-title">
+          <h2>Abstract</h2>
+        </div>
+
+        <div class="">
+          <p class="abstract">
+The fashion industry responds rapidly to seasonal changes, which directly influence consumer purchasing behavior. Among these factors, weather conditions play a crucial role in clothing selection and purchase decisions, making their prediction essential for effective inventory management and marketing strategy development. This study analyzes the relationship between seasonal clothing search trends and weather factors using online search data.
+
+Seasonal clothing keyword search volumes were collected from Naver Data Lab, alongside weather data for Seoul obtained via the Visual Crossing Weather API, covering the period from May 2023 to May 2024. Clothing-related keywords were categorized into summer and winter groups, and statistical analyses—including correlation analysis, factor analysis, and multiple regression analysis—were conducted using SPSS 26.0 to examine the influence of temperature, precipitation, UV index, and visibility on search behavior.
+
+The results show a strong positive correlation between temperature and summer clothing searches, and a negative correlation with winter clothing searches. Temperature, precipitation, and UV index significantly influenced summer clothing search trends, while visibility positively affected winter clothing searches. These findings demonstrate that weather conditions significantly shape online fashion search behavior.
+
+This study provides empirical insights into how weather-driven search trends can support data-informed marketing strategies and inventory planning in the fashion industry. While the analysis is limited to Seoul and a one-year period, future research incorporating broader regions and longer timeframes could enhance the generalizability of the findings.            </div>
+</section>
+
+
+      <!-- BACK -->
+      <section class="section">
+        <a class="btn secondary" href="../projects.html">← Back to Projects</a>
+      </section>
+
+      <footer class="footer">
+        <p>© 2026</span> Lidiia Khleborodova</p>
+      </footer>
+    </main>
+
+    <script>
+      const buttons = document.querySelectorAll(".switch-btn");
+      const sections = document.querySelectorAll(".project-section");
+
+      buttons.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          buttons.forEach((b) => b.classList.remove("active"));
+          sections.forEach((s) => s.classList.remove("active"));
+
+          btn.classList.add("active");
+          document.getElementById(btn.dataset.target).classList.add("active");
+        });
+      });
+    </script>
+  </body>
+</html>

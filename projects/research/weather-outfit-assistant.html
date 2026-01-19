@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lidiia — Projects</title>
+    <link rel="stylesheet" href="../../styles.css" />
+  </head>
+  <body>
+    <header class="container header">
+      <nav class="nav">
+        <a href="../index.html">About</a>
+<a href="../../projects/projects.html">Projects</a>      </nav>
+    </header>
+
+    <main class="container">
+      <!-- HERO -->
+      <section class="hero hero-small">
+        <p class="tag">Research</p>
+        <h2>AI Fashion Assistant: A Web Application for Outfit Visualization Based on Weather Data Using OpenAI and Diffusion Models </h2>
+        <p class="sub">
+
+         
+          <p><i>Poster presentation at 2025학년 한국의류학회 춘계학술대회</i></p>
+          
+        </p>
+
+      </section>
+
+
+      <!-- ABSTRACT -->
+      <section class="section">
+        <div class="section-title">
+          <h2>Abstract</h2>
+        </div>
+
+        <div class="">
+          <p class="abstract">
+            This study explores an AI-powered web application for personalized fashion styling based on real-time weather conditions and cultural context. The system combines OpenAI’s language model to generate weather-appropriate outfit descriptions with a diffusion model to visualize these recommendations as realistic fashion images.
+
+Unlike existing styling applications that rely on static catalogs or user-uploaded images, the proposed approach dynamically generates outfits using live weather data, location-based cultural considerations, and text-to-image synthesis. The application is implemented as a web-based system using Vue.js and FastAPI, enabling cross-platform access without installation.
+
+The results demonstrate that integrating large language models with diffusion models can produce context-aware, visually coherent styling suggestions that resemble real-world outfits. While high-quality image generation introduces latency challenges, the study highlights the potential of AI-driven styling tools for personalized user experiences, fashion content creation, and global brand communication.
+          </p>
+          
+
+<div>
+          <a class="btn" href="https://github.com/Yamobura/WeatherWise" target="_blank">Code</a>
+        </div>
+        
+      </section>
+
+            <section class="section">
+  <div class="gallery">
+    <figure class="gallery-item">
+      <img src="../../image/research/weather/1.png" alt="" />
+    </figure>
+    <figure class="gallery-item">
+  
+  </div>
+</section>
+
+      <!-- BACK -->
+      <section class="section">
+        <a class="btn secondary" href="../projects.html">← Back to Projects</a>
+      </section>
+
+      <footer class="footer">
+        <p>© 2026</span> Lidiia Khleborodova</p>
+      </footer>
+    </main>
+
+    <script>
+      const buttons = document.querySelectorAll(".switch-btn");
+      const sections = document.querySelectorAll(".project-section");
+
+      buttons.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          buttons.forEach((b) => b.classList.remove("active"));
+          sections.forEach((s) => s.classList.remove("active"));
+
+          btn.classList.add("active");
+          document.getElementById(btn.dataset.target).classList.add("active");
+        });
+      });
+    </script>
+  </body>
+</html>

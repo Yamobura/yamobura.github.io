@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lidiia — Projects</title>
+    <link rel="stylesheet" href="../../styles.css" />
+  </head>
+  <body>
+    <header class="container header">
+      <nav class="nav">
+        <a href="../index.html">About</a>
+<a href="../../projects/projects.html">Projects</a>      </nav>
+    </header>
+
+    <main class="container">
+      <!-- HERO -->
+      <section class="hero hero-small">
+        <p class="tag">Research</p>
+        <h2>동아시아 격투 게임 캐릭터의 의상을 통한 국가 정체성의
+시각적 구현 분석 (Visual Representation of National Identity Through the Costumes of East Asia Fighting Game Characters)
+ </h2>
+        <p class="sub">
+
+         
+          <p><i>Poster presentation at 2024학년 한국의류산업학회 추계학술대회</i></p>
+          
+        </p>
+
+      </section>
+
+
+      <!-- ABSTRACT -->
+      <section class="section">
+        <div class="section-title">
+          <h2>Abstract</h2>
+        </div>
+
+        <div class="">
+          <p class="abstract">
+This study examines how national identity is visually represented through the costumes of East Asian fighting game characters. Focusing on representative characters from Tekken and Street Fighter, the research analyzes how clothing, accessories, and styling elements are used to communicate cultural identity for Korean, Chinese, and Japanese characters.
+
+The findings show that Japanese and Chinese characters tend to convey national identity through recognizable traditional garments and symbolic motifs, resulting in clear and consistent cultural representation. In contrast, Korean characters often display cultural inaccuracies or ambiguous design choices, which have led to criticism from players and raised concerns about distorted national representation. These cases demonstrate that character costumes function as a key form of visual storytelling rather than mere aesthetic decoration.
+
+This study highlights the importance of cultural understanding and accuracy in game character costume design and argues for more responsible and informed approaches to representing national identity in global game content.            </p>
+            </div>
+</section>
+
+
+      <!-- BACK -->
+      <section class="section">
+        <a class="btn secondary" href="../projects.html">← Back to Projects</a>
+      </section>
+
+      <footer class="footer">
+        <p>© 2026</span> Lidiia Khleborodova</p>
+      </footer>
+    </main>
+
+    <script>
+      const buttons = document.querySelectorAll(".switch-btn");
+      const sections = document.querySelectorAll(".project-section");
+
+      buttons.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          buttons.forEach((b) => b.classList.remove("active"));
+          sections.forEach((s) => s.classList.remove("active"));
+
+          btn.classList.add("active");
+          document.getElementById(btn.dataset.target).classList.add("active");
+        });
+      });
+    </script>
+  </body>
+</html>

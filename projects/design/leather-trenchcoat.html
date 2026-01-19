@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lidiia — Projects</title>
+    <link rel="stylesheet" href="../../styles.css" />
+  </head>
+  <body>
+    <header class="container header">
+      <nav class="nav">
+        <a href="../index.html">About</a>
+<a href="../../projects/projects.html">Projects</a>      </nav>
+    </header>
+
+    <main class="container">
+ <!-- TITLE -->
+      <section class="hero hero-small">
+        <p class="tag">3D design</p>
+        <h2>Leather Trench Coat</h2>
+        <p class="sub">
+         A design study developed through contemporary fashion collection
+          research and AI-assisted prototyping. The project began with analysis
+          of current collection trends and visual references, which were used to
+          generate initial design concepts through Midjourney. Selected outcomes
+          were then translated into a digital garment prototype using CLO3D,
+          focusing on silhouette, proportion, and material expression in leather.
+        </p>
+      </section>
+
+      <section class="section">
+  <div class="gallery">
+    <figure class="gallery-item">
+      <img src="../../image/design/trench/1.png"  />
+    </figure>
+    <figure class="gallery-item">
+      <img src="../../image/design/trench/2.png"  />
+    </figure>
+    <figure class="gallery-item">
+      <img src="../../image/design/trench/3.png"  />
+    </figure>
+
+  </div>
+</section>
+
+
+      <!-- BACK -->
+      <section class="section">
+        <a class="btn secondary" href="../projects.html">
+          ← Back to Projects
+        </a>
+
+    </main> 
+    <footer class="footer">
+        <p>© 2026</span> Lidiia Khleborodova</p>
+      </footer>
+
+    <script>
+
+        const buttons = document.querySelectorAll(".switch-btn");
+  const sections = document.querySelectorAll(".project-section");
+
+  buttons.forEach(btn => {
+    btn.addEventListener("click", () => {
+      buttons.forEach(b => b.classList.remove("active"));
+      sections.forEach(s => s.classList.remove("active"));
+
+      btn.classList.add("active");
+      document
+        .getElementById(btn.dataset.target)
+        .classList.add("active");
+    });
+  });
+    </script>
+  </body>
+</html>

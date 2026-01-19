@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lidiia — Projects</title>
+    <link rel="stylesheet" href="../../styles.css" />
+  </head>
+  <body>
+    <header class="container header">
+      <nav class="nav">
+        <a href="../index.html">About</a>
+        <a href="../../projects/projects.html">Projects</a>
+      </nav>
+    </header>
+
+    <main class="container">
+      <!-- HERO -->
+      <section class="hero hero-small">
+        <p class="tag">Research</p>
+        <h2>Development of a Web-based AI Assistant to Support Beginner-Level Fashion Design Education</h2>
+        <p class="sub">
+
+         
+          <p><i>Master of Clothing and Textiles thesis</i></p>
+          
+        </p>
+
+      </section>
+
+
+      <!-- ABSTRACT -->
+      <section class="section">
+        <div class="section-title">
+          <h2>Abstract</h2>
+        </div>
+
+        <div class="">
+          <p class="abstract">
+            This study develops a web-based fashion design learning tool that supports the ideation process of beginner-level learners using generative artificial intelligence and evaluates its educational applicability. In fashion design education, ideation requires the ability to explore design alternatives and translate abstract concepts into visual form; however, traditional methods such as sketching and collage often demand technical skills that pose barriers for beginners. Despite recent advances in generative AI, few tools are designed specifically for educational use. To address this gap, a taxonomy-based interaction framework was constructed using core fashion design elements—garment type, silhouette, style, color, pattern, and material. Based on this structure, an automatic prompt generation method was implemented, enabling image generation through interface selection without requiring prompt-engineering knowledge. The system was implemented with a Vue.js frontend and FastAPI backend. Three diffusion models (SD 1.5, SDXL, and Flux) were comparatively evaluated to identify a model suitable for educational purposes. System performance and educational suitability were examined through image generation experiments and a user study with 20 fashion-related major students. Survey results indicated high perceived usefulness, ease of use, and engagement, suggesting that the proposed tool effectively supports visual ideation for beginner-level fashion design learning.
+          </p>
+        </div>
+
+        <div>
+          <a class="btn" href="https://github.com/Yamobura/PromptWear" target="_blank">Code</a>
+        </div>
+        
+      </section>
+
+            <section class="section">
+  <div class="gallery">
+    <figure class="gallery-item">
+      <img src="../../image/research/ed_assistand/1.png" alt="" />
+    </figure>
+    <figure class="gallery-item">
+<img src="../../image/research/ed_assistand/2.png" alt="" />    </figure>
+  
+  </div>
+</section>
+
+
+      <!-- BACK -->
+      <section class="section">
+        <a class="btn secondary" href="../projects.html">← Back to Projects</a>
+      </section>
+
+      <footer class="footer">
+        <p>© 2026</span> Lidiia Khleborodova</p>
+      </footer>
+    </main>
+
+    <script>
+      const buttons = document.querySelectorAll(".switch-btn");
+      const sections = document.querySelectorAll(".project-section");
+
+      buttons.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          buttons.forEach((b) => b.classList.remove("active"));
+          sections.forEach((s) => s.classList.remove("active"));
+
+          btn.classList.add("active");
+          document.getElementById(btn.dataset.target).classList.add("active");
+        });
+      });
+    </script>
+  </body>
+</html>

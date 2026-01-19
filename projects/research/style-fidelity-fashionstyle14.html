@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lidiia — Projects</title>
+    <link rel="stylesheet" href="../../styles.css" />
+  </head>
+  <body>
+    <header class="container header">
+      <nav class="nav">
+        <a href="../index.html">About</a>
+<a href="../../projects/projects.html">Projects</a>      </nav>
+    </header>
+
+    <main class="container">
+      <!-- HERO -->
+      <section class="hero hero-small">
+        <p class="tag">Research</p>
+        <h2>Evaluating Style Fidelity of AI-Generated Fashion Images Using Modern 
+Vision Models Fine-Tuned on FashionStyle14</h2>
+        <p class="sub">
+          <p><i>Poster presentation at 2025학년 한국의류산업학회 추계학술대회</i></p>
+          
+        </p>
+
+      </section>
+
+
+      <!-- ABSTRACT -->
+      <section class="section">
+        <div class="section-title">
+          <h2>Abstract</h2>
+        </div>
+
+        <div class="">
+          <p class="abstract">
+As diffusion models are increasingly used in fashion design and styling, evaluating whether generated images accurately reflect intended fashion styles has become a critical challenge. Existing metrics such as CLIP score and FID focus on visual quality or text–image alignment but fail to capture fashion-specific style semantics. This study proposes a quantitative framework for evaluating style fidelity in AI-generated fashion images using modern vision models fine-tuned on the FashionStyle14 dataset.
+
+Vision Transformers (ViT) and ConvNeXt models were fine-tuned to classify 14 Japanese fashion styles and then applied to assess Stable Diffusion–generated images. While ConvNeXt achieved strong performance on real fashion images, classification accuracy dropped substantially on generated outputs, revealing significant style mismatches. Distinct styles such as lolita and rock were reproduced reliably, whereas styles defined by subtle coordination cues showed poor fidelity.
+
+The results demonstrate that visual realism does not guarantee stylistic accuracy and highlight the limitations of current generative models in representing culturally nuanced fashion styles. This work contributes a reproducible evaluation approach for style-aware analysis of AI-generated fashion imagery.          </p>
+        </div>
+      </section>
+
+
+      <!-- BACK -->
+      <section class="section">
+        <a class="btn secondary" href="../projects.html">← Back to Projects</a>
+      </section>
+
+      <footer class="footer">
+        <p>© 2026</span> Lidiia Khleborodova</p>
+      </footer>
+    </main>
+
+    <script>
+      const buttons = document.querySelectorAll(".switch-btn");
+      const sections = document.querySelectorAll(".project-section");
+
+      buttons.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          buttons.forEach((b) => b.classList.remove("active"));
+          sections.forEach((s) => s.classList.remove("active"));
+
+          btn.classList.add("active");
+          document.getElementById(btn.dataset.target).classList.add("active");
+        });
+      });
+    </script>
+  </body>
+</html>

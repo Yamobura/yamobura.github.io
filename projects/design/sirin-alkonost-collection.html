@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lidiia — Projects</title>
+    <link rel="stylesheet" href="../../styles.css" />
+  </head>
+  <body>
+    <header class="container header">
+      <nav class="nav">
+        <a href="../index.html">About</a>
+<a href="../../projects/projects.html">Projects</a>      </nav>
+    </header>
+
+    <main class="container">
+ <!-- TITLE -->
+      <section class="hero hero-small">
+        <p class="tag">3D design</p>
+        <h2>Sirin & Alkonost</h2>
+        <p class="sub">
+          Inspired by Viktor Vasnetsov’s painting of the Slavic mythological creatures
+  Sirin and Alkonost, this fashion collection explores duality through
+  silhouette. The dresses translate the contrasting natures of the two figures
+  into form and volume, using softness and structure to embody mythological
+  symbolism. The project reimagines narrative imagery as contemporary fashion
+  through shape, movement, and proportion.
+        </p>
+      </section>
+
+      <section class="section">
+  <div class="gallery">
+    <figure class="gallery-item">
+      <img src="../../image/design/sirin_alkonost/1.jpg"  />
+    </figure>
+    <figure class="gallery-item">
+      <img src="../../image/design/sirin_alkonost/2.png"  />
+    </figure>
+    <figure class="gallery-item">
+      <img src="../../image/design/sirin_alkonost/3.png"  />
+    </figure>
+
+  </div>
+</section>
+
+
+      <!-- BACK -->
+      <section class="section">
+        <a class="btn secondary" href="../projects.html">
+          ← Back to Projects
+        </a>
+
+    </main> 
+    <footer class="footer">
+        <p>© 2026</span> Lidiia Khleborodova</p>
+      </footer>
+
+    <script>
+
+        const buttons = document.querySelectorAll(".switch-btn");
+  const sections = document.querySelectorAll(".project-section");
+
+  buttons.forEach(btn => {
+    btn.addEventListener("click", () => {
+      buttons.forEach(b => b.classList.remove("active"));
+      sections.forEach(s => s.classList.remove("active"));
+
+      btn.classList.add("active");
+      document
+        .getElementById(btn.dataset.target)
+        .classList.add("active");
+    });
+  });
+    </script>
+  </body>
+</html>

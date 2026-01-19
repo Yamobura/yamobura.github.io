@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lidiia — Projects</title>
+    <link rel="stylesheet" href="../../styles.css" />
+  </head>
+  <body>
+    <header class="container header">
+      <nav class="nav">
+        <a href="../index.html">About</a>
+<a href="../../projects/projects.html">Projects</a>      </nav>
+    </header>
+
+    <main class="container">
+ <!-- TITLE -->
+      <section class="hero hero-small">
+        <p class="tag">Textile Experiment</p>
+        <h2>Cyanotype Textile Experiments</h2>
+        <p class="sub">
+          Inspired by the blue-and-white ornamental language of Gzhel ceramics, this
+  project explores cyanotype printing as a contemporary textile surface
+  technique. Traditional motifs are reinterpreted as negative images through
+  light exposure, transforming familiar cultural symbols into abstract,
+  blue-toned textile compositions. The experiments focus on materiality,
+  contrast, and the dialogue between craft heritage and modern fashion design.
+        </p>
+      </section>
+
+      <section class="section">
+  <div class="gallery">
+    <figure class="gallery-item">
+      <img src="../../image/design/cyanotype/1.jpg" alt="Cyanotype textile sample" />
+    </figure>
+    <figure class="gallery-item">
+      <img src="../../image/design/cyanotype/2.jpg" alt="Cyanotype textile detail" />
+    </figure>
+    <figure class="gallery-item">
+      <img src="../../image/design/cyanotype/3.jpg" alt="Cyanotype pattern experiment" />
+    </figure>
+    <figure class="gallery-item">
+      <img src="../../image/design/cyanotype/4.jpg" alt="Cyanotype fabric application" />
+    </figure>
+  </div>
+</section>
+
+
+      <!-- BACK -->
+      <section class="section">
+        <a class="btn secondary" href="../projects.html">
+          ← Back to Projects
+        </a>
+
+    </main> 
+    <footer class="footer">
+        <p>© 2026</span> Lidiia Khleborodova</p>
+      </footer>
+
+    <script>
+
+        const buttons = document.querySelectorAll(".switch-btn");
+  const sections = document.querySelectorAll(".project-section");
+
+  buttons.forEach(btn => {
+    btn.addEventListener("click", () => {
+      buttons.forEach(b => b.classList.remove("active"));
+      sections.forEach(s => s.classList.remove("active"));
+
+      btn.classList.add("active");
+      document
+        .getElementById(btn.dataset.target)
+        .classList.add("active");
+    });
+  });
+    </script>
+  </body>
+</html>
