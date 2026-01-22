@@ -33,7 +33,7 @@ Vision Models Fine-Tuned on FashionStyle14</h2>
           <h2>Abstract</h2>
         </div>
 
-        <div class="">
+        <div class="text-justify">
           <p class="abstract">
 As diffusion models are increasingly used in fashion design and styling, evaluating whether generated images accurately reflect intended fashion styles has become a critical challenge. Existing metrics such as CLIP score and FID focus on visual quality or text–image alignment but fail to capture fashion-specific style semantics. This study proposes a quantitative framework for evaluating style fidelity in AI-generated fashion images using modern vision models fine-tuned on the FashionStyle14 dataset.
 
@@ -41,7 +41,31 @@ Vision Transformers (ViT) and ConvNeXt models were fine-tuned to classify 14 Jap
 
 The results demonstrate that visual realism does not guarantee stylistic accuracy and highlight the limitations of current generative models in representing culturally nuanced fashion styles. This work contributes a reproducible evaluation approach for style-aware analysis of AI-generated fashion imagery.          </p>
         </div>
+
+        <div>
+          <h4>Technologies</h4>
+          PyTorch</div>
+<br>
+        <div>
+          <a class="btn" href="https://github.com/Yamobura/Fashion14_ImageClasiffication" target="_blank">Code</a>
+        </div>
+
       </section>
+
+                  <section class="section">
+  <div class="gallery">
+    <figure class="gallery-item">
+      <img src="../../image/posters/fashionstyle14.jpg" alt="" />
+    </figure>
+  
+  </div>
+</section>
+
+<!-- LIGHTBOX -->
+<div id="lightbox" class="lightbox">
+  <span class="lightbox-close">&times;</span>
+  <img class="lightbox-img" src="" alt="Expanded view" />
+</div>
 
 
       <!-- BACK -->
@@ -67,6 +91,44 @@ The results demonstrate that visual realism does not guarantee stylistic accurac
           document.getElementById(btn.dataset.target).classList.add("active");
         });
       });
+
+      const galleryImages = document.querySelectorAll(".gallery-item img");
+  const lightbox = document.getElementById("lightbox");
+  const lightboxImg = document.querySelector(".lightbox-img");
+  const lightboxClose = document.querySelector(".lightbox-close");
+
+  galleryImages.forEach(img => {
+    img.addEventListener("click", () => {
+      lightbox.classList.add("active");
+      lightboxImg.src = img.src;
+      document.body.style.overflow = "hidden"; // disable scroll
+    });
+  });
+
+  // Close on click X
+  lightboxClose.addEventListener("click", () => {
+    closeLightbox();
+  });
+
+  // Close on background click
+  lightbox.addEventListener("click", (e) => {
+    if (e.target !== lightboxImg) {
+      closeLightbox();
+    }
+  });
+
+  // ESC key close
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") {
+      closeLightbox();
+    }
+  });
+
+  function closeLightbox() {
+    lightbox.classList.remove("active");
+    lightboxImg.src = "";
+    document.body.style.overflow = "auto";
+  }
     </script>
   </body>
 </html>

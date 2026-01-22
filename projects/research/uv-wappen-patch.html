@@ -38,7 +38,7 @@ Smart Fiber Exhibition</i></p>
           <h2>Abstract</h2>
         </div>
 
-        <div class="">
+        <div class="text-justify">
           <p class="abstract">
 Ultraviolet (UV) radiation is essential for vitamin D synthesis but poses serious health risks when exposure is excessive, including skin damage and increased cancer risk. As outdoor activities increase, there is a growing need for practical and user-friendly solutions to monitor UV exposure in daily life. This study presents a detachable, wearable UV monitoring wappen patch designed to seamlessly integrate into everyday clothing and accessories.
 
@@ -46,7 +46,28 @@ The system combines a low-power UV photodiode sensor with Bluetooth Low Energy (
 
 By minimizing user intervention and integrating naturally into daily wear, the proposed UV monitoring patch offers an effective approach to personalized sun exposure management. This research highlights the potential of wearable health technologies to support preventive care and reduce UV-related health risks through seamless, user-centered design.            </p>
             </div>
+
+            <div>
+          <h4>Technologies</h4>
+          Arduino IDE</div>
+<br>
+
 </section>
+
+            <section class="section">
+  <div class="gallery">
+    <figure class="gallery-item">
+      <img src="../../image/posters/itmc.jpg" alt="" />
+    </figure>
+  
+  </div>
+</section>
+
+<!-- LIGHTBOX -->
+<div id="lightbox" class="lightbox">
+  <span class="lightbox-close">&times;</span>
+  <img class="lightbox-img" src="" alt="Expanded view" />
+</div>
 
 
       <!-- BACK -->
@@ -72,6 +93,45 @@ By minimizing user intervention and integrating naturally into daily wear, the p
           document.getElementById(btn.dataset.target).classList.add("active");
         });
       });
+
+
+      const galleryImages = document.querySelectorAll(".gallery-item img");
+  const lightbox = document.getElementById("lightbox");
+  const lightboxImg = document.querySelector(".lightbox-img");
+  const lightboxClose = document.querySelector(".lightbox-close");
+
+  galleryImages.forEach(img => {
+    img.addEventListener("click", () => {
+      lightbox.classList.add("active");
+      lightboxImg.src = img.src;
+      document.body.style.overflow = "hidden"; // disable scroll
+    });
+  });
+
+  // Close on click X
+  lightboxClose.addEventListener("click", () => {
+    closeLightbox();
+  });
+
+  // Close on background click
+  lightbox.addEventListener("click", (e) => {
+    if (e.target !== lightboxImg) {
+      closeLightbox();
+    }
+  });
+
+  // ESC key close
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") {
+      closeLightbox();
+    }
+  });
+
+  function closeLightbox() {
+    lightbox.classList.remove("active");
+    lightboxImg.src = "";
+    document.body.style.overflow = "auto";
+  }
     </script>
   </body>
 </html>

@@ -35,7 +35,7 @@
           <h2>Abstract</h2>
         </div>
 
-        <div class="">
+        <div class="text-justify">
           <p class="abstract">Cinema has long influenced fashion design by shaping visual language, mood, and atmosphere. This study explores how generative AI tools can support early-stage fashion ideation by transforming film screencaps into digital moodboards. Using films frequently referenced in fashion contexts—Blade Runner, In the Mood for Love, and Marie Antoinette—the research investigates how AI can curate, interpret, and expand visual inspiration.
 
 Color palettes were extracted from film imagery and used to retrieve related artworks and fashion references, while vision–language models generated descriptive keywords and AI-generated images reflecting each film’s aesthetic. The resulting moodboards demonstrated strong visual coherence and thematic consistency, translating cinematic atmospheres into actionable design direction.
@@ -43,7 +43,28 @@ Color palettes were extracted from film imagery and used to retrieve related art
 The findings suggest that AI can act as a creative collaborator rather than a replacement for designers, supporting interpretation, reducing manual search effort, and expanding visual exploration. While limitations remain in aesthetic accuracy and workflow integration, the study highlights AI’s potential in co-creative fashion design processes rooted in visual culture.
             </p>
             </div>
+
+            <div>
+          <h4>Technologies</h4>
+          Python “Color Thief” library, Google Art & Culture “Art Palette” Experiment, Google Art & Culture “Runway Palette” Experiment, CLIP Interrogator</div>
+<br>
 </section>
+
+            <section class="section">
+  <div class="gallery">
+    <figure class="gallery-item">
+      <img src="../../image/posters/moodboard.jpg" alt="" />
+    </figure>
+
+  
+  </div>
+</section>
+
+<!-- LIGHTBOX -->
+<div id="lightbox" class="lightbox">
+  <span class="lightbox-close">&times;</span>
+  <img class="lightbox-img" src="" alt="Expanded view" />
+</div>
 
 
       <!-- BACK -->
@@ -69,6 +90,44 @@ The findings suggest that AI can act as a creative collaborator rather than a re
           document.getElementById(btn.dataset.target).classList.add("active");
         });
       });
+
+      const galleryImages = document.querySelectorAll(".gallery-item img");
+  const lightbox = document.getElementById("lightbox");
+  const lightboxImg = document.querySelector(".lightbox-img");
+  const lightboxClose = document.querySelector(".lightbox-close");
+
+  galleryImages.forEach(img => {
+    img.addEventListener("click", () => {
+      lightbox.classList.add("active");
+      lightboxImg.src = img.src;
+      document.body.style.overflow = "hidden"; // disable scroll
+    });
+  });
+
+  // Close on click X
+  lightboxClose.addEventListener("click", () => {
+    closeLightbox();
+  });
+
+  // Close on background click
+  lightbox.addEventListener("click", (e) => {
+    if (e.target !== lightboxImg) {
+      closeLightbox();
+    }
+  });
+
+  // ESC key close
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") {
+      closeLightbox();
+    }
+  });
+
+  function closeLightbox() {
+    lightbox.classList.remove("active");
+    lightboxImg.src = "";
+    document.body.style.overflow = "auto";
+  }
     </script>
   </body>
 </html>

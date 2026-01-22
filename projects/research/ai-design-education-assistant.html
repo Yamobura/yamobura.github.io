@@ -35,7 +35,7 @@
           <h2>Abstract</h2>
         </div>
 
-        <div class="">
+        <div class="text-justify">
           <p class="abstract">
             This study develops a web-based fashion design learning tool that supports the ideation process of beginner-level learners using generative artificial intelligence and evaluates its educational applicability. In fashion design education, ideation requires the ability to explore design alternatives and translate abstract concepts into visual form; however, traditional methods such as sketching and collage often demand technical skills that pose barriers for beginners. Despite recent advances in generative AI, few tools are designed specifically for educational use. To address this gap, a taxonomy-based interaction framework was constructed using core fashion design elements—garment type, silhouette, style, color, pattern, and material. Based on this structure, an automatic prompt generation method was implemented, enabling image generation through interface selection without requiring prompt-engineering knowledge. The system was implemented with a Vue.js frontend and FastAPI backend. Three diffusion models (SD 1.5, SDXL, and Flux) were comparatively evaluated to identify a model suitable for educational purposes. System performance and educational suitability were examined through image generation experiments and a user study with 20 fashion-related major students. Survey results indicated high perceived usefulness, ease of use, and engagement, suggesting that the proposed tool effectively supports visual ideation for beginner-level fashion design learning.
           </p>
@@ -62,6 +62,13 @@
   </div>
 </section>
 
+<!-- LIGHTBOX -->
+<div id="lightbox" class="lightbox">
+  <span class="lightbox-close">&times;</span>
+  <img class="lightbox-img" src="" alt="Expanded view" />
+</div>
+
+
 
       <!-- BACK -->
       <section class="section">
@@ -86,6 +93,45 @@
           document.getElementById(btn.dataset.target).classList.add("active");
         });
       });
+
+      const galleryImages = document.querySelectorAll(".gallery-item img");
+  const lightbox = document.getElementById("lightbox");
+  const lightboxImg = document.querySelector(".lightbox-img");
+  const lightboxClose = document.querySelector(".lightbox-close");
+
+  galleryImages.forEach(img => {
+    img.addEventListener("click", () => {
+      lightbox.classList.add("active");
+      lightboxImg.src = img.src;
+      document.body.style.overflow = "hidden"; // disable scroll
+    });
+  });
+
+  // Close on click X
+  lightboxClose.addEventListener("click", () => {
+    closeLightbox();
+  });
+
+  // Close on background click
+  lightbox.addEventListener("click", (e) => {
+    if (e.target !== lightboxImg) {
+      closeLightbox();
+    }
+  });
+
+  // ESC key close
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") {
+      closeLightbox();
+    }
+  });
+
+  function closeLightbox() {
+    lightbox.classList.remove("active");
+    lightboxImg.src = "";
+    document.body.style.overflow = "auto";
+  }
+      
     </script>
   </body>
 </html>

@@ -34,7 +34,7 @@
           <h2>Abstract</h2>
         </div>
 
-        <div class="">
+        <div class="text-justify">
           <p class="abstract">
             This study explores an AI-powered web application for personalized fashion styling based on real-time weather conditions and cultural context. The system combines OpenAI’s language model to generate weather-appropriate outfit descriptions with a diffusion model to visualize these recommendations as realistic fashion images.
 
@@ -62,9 +62,17 @@ The results demonstrate that integrating large language models with diffusion mo
       <img src="../../image/research/weather/1.png" alt="" />
     </figure>
     <figure class="gallery-item">
+      <img src="../../image/posters/WeatherWise.jpg" alt="" />
+    </figure>
   
   </div>
 </section>
+
+<!-- LIGHTBOX -->
+<div id="lightbox" class="lightbox">
+  <span class="lightbox-close">&times;</span>
+  <img class="lightbox-img" src="" alt="Expanded view" />
+</div>
 
       <!-- BACK -->
       <section class="section">
@@ -89,6 +97,44 @@ The results demonstrate that integrating large language models with diffusion mo
           document.getElementById(btn.dataset.target).classList.add("active");
         });
       });
+
+      const galleryImages = document.querySelectorAll(".gallery-item img");
+  const lightbox = document.getElementById("lightbox");
+  const lightboxImg = document.querySelector(".lightbox-img");
+  const lightboxClose = document.querySelector(".lightbox-close");
+
+  galleryImages.forEach(img => {
+    img.addEventListener("click", () => {
+      lightbox.classList.add("active");
+      lightboxImg.src = img.src;
+      document.body.style.overflow = "hidden"; // disable scroll
+    });
+  });
+
+  // Close on click X
+  lightboxClose.addEventListener("click", () => {
+    closeLightbox();
+  });
+
+  // Close on background click
+  lightbox.addEventListener("click", (e) => {
+    if (e.target !== lightboxImg) {
+      closeLightbox();
+    }
+  });
+
+  // ESC key close
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") {
+      closeLightbox();
+    }
+  });
+
+  function closeLightbox() {
+    lightbox.classList.remove("active");
+    lightboxImg.src = "";
+    document.body.style.overflow = "auto";
+  }
     </script>
   </body>
 </html>

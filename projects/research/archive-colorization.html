@@ -34,7 +34,7 @@
           <h2>Abstract</h2>
         </div>
 
-        <div class="">
+        <div class="text-justify">
           <p class="abstract">
 Colorizing grayscale images is a challenging computer vision task, particularly in the context of historical fashion archives where original color information is missing or undocumented. Accurate colorization plays an important role in visual restoration, cultural preservation, and public access, yet it also raises questions about historical authenticity and interpretive uncertainty.
 
@@ -42,7 +42,27 @@ This study compares CNN- and GAN-based deep learning architectures for colorizin
 
 Results show that Pix2Pix achieves the highest perceptual quality and color accuracy, outperforming CNN-based models across training stages, while ResNet provides stable color reconstruction and U-Net shows more limited improvements. The findings emphasize the importance of perceptual evaluation in historical image colorization and highlight the potential of GAN-based approaches for fashion heritage restoration and interdisciplinary research at the intersection of AI and fashion history.
         </div>
+
+        <div>
+          <h4>Technologies</h4>
+          PyTorch</div>
+
       </section>
+
+                  <section class="section">
+  <div class="gallery">
+    <figure class="gallery-item">
+      <img src="../../image/posters/sfti.jpg" alt="" />
+    </figure>
+  
+  </div>
+</section>
+
+<!-- LIGHTBOX -->
+<div id="lightbox" class="lightbox">
+  <span class="lightbox-close">&times;</span>
+  <img class="lightbox-img" src="" alt="Expanded view" />
+</div>
 
 
       <!-- BACK -->
@@ -68,6 +88,44 @@ Results show that Pix2Pix achieves the highest perceptual quality and color accu
           document.getElementById(btn.dataset.target).classList.add("active");
         });
       });
+
+      const galleryImages = document.querySelectorAll(".gallery-item img");
+  const lightbox = document.getElementById("lightbox");
+  const lightboxImg = document.querySelector(".lightbox-img");
+  const lightboxClose = document.querySelector(".lightbox-close");
+
+  galleryImages.forEach(img => {
+    img.addEventListener("click", () => {
+      lightbox.classList.add("active");
+      lightboxImg.src = img.src;
+      document.body.style.overflow = "hidden"; // disable scroll
+    });
+  });
+
+  // Close on click X
+  lightboxClose.addEventListener("click", () => {
+    closeLightbox();
+  });
+
+  // Close on background click
+  lightbox.addEventListener("click", (e) => {
+    if (e.target !== lightboxImg) {
+      closeLightbox();
+    }
+  });
+
+  // ESC key close
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") {
+      closeLightbox();
+    }
+  });
+
+  function closeLightbox() {
+    lightbox.classList.remove("active");
+    lightboxImg.src = "";
+    document.body.style.overflow = "auto";
+  }
     </script>
   </body>
 </html>
