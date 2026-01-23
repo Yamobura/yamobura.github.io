@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lidiia — Projects</title>
+    <link rel="stylesheet" href="../../styles.css" />
+  </head>
+  <body>
+    <header class="container header">
+      <nav class="nav">
+        <a href="../../index.html">About</a>
+<a href="../../projects/projects.html">Projects</a>      </nav>
+    </header>
+
+    <main class="container">
+      <!-- HERO -->
+      <section class="hero hero-small">
+        <p class="tag">Research</p>
+        <h2>Development of E-commerce website for individual entrepreneur</h2>
+        <p class="sub">
+          <p><i>Bachelor degree thesis</i></p>
+          
+        </p>
+
+      </section>
+
+
+      <!-- ABSTRACT -->
+      <section class="section">
+        <div class="section-title">
+          <h2>Abstract</h2>
+        </div>
+
+        <div class="text-justify">
+          <p class="abstract">
+This project presents the design and development of a full-featured custom e-commerce web platform created for a local retail brand The system was built as a vanila PHP web application, focusing on performance, usability, scalability, and business practicality rather than template-based or CMS solutions.
+
+The platform includes a complete customer experience flow: product catalog with categories and filtering, product pages, cart system, and order checkout, as well as a fully functional administrative dashboard for content and order management. The architecture follows the MVC (Model–View–Controller) pattern and uses a structured backend design with object-oriented programming, relational database modeling, and modular routing.
+
+The result is a scalable, production-ready web system that demonstrates full-stack development skills, system architecture design, and real business integration — from concept and research to deployment and testing.        </div>
+
+        <div>
+          <h4>Technologies</h4>
+          HTML, CSS, JavaScript, PHP, MySQL</div>
+      </section>
+
+                  <section class="section">
+</section>
+
+<!-- LIGHTBOX -->
+<div id="lightbox" class="lightbox">
+  <span class="lightbox-close">&times;</span>
+  <img class="lightbox-img" src="" alt="Expanded view" />
+</div>
+
+
+      <!-- BACK -->
+      <section class="section">
+        <a class="btn secondary" href="../projects.html">← Back to Projects</a>
+      </section>
+
+      <footer class="footer">
+        <p>© 2026</span> Lidiia Khleborodova</p>
+      </footer>
+    </main>
+
+    <script>
+      const buttons = document.querySelectorAll(".switch-btn");
+      const sections = document.querySelectorAll(".project-section");
+
+      buttons.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          buttons.forEach((b) => b.classList.remove("active"));
+          sections.forEach((s) => s.classList.remove("active"));
+
+          btn.classList.add("active");
+          document.getElementById(btn.dataset.target).classList.add("active");
+        });
+      });
+
+      const galleryImages = document.querySelectorAll(".gallery-item img");
+  const lightbox = document.getElementById("lightbox");
+  const lightboxImg = document.querySelector(".lightbox-img");
+  const lightboxClose = document.querySelector(".lightbox-close");
+
+  galleryImages.forEach(img => {
+    img.addEventListener("click", () => {
+      lightbox.classList.add("active");
+      lightboxImg.src = img.src;
+      document.body.style.overflow = "hidden"; // disable scroll
+    });
+  });
+
+  // Close on click X
+  lightboxClose.addEventListener("click", () => {
+    closeLightbox();
+  });
+
+  // Close on background click
+  lightbox.addEventListener("click", (e) => {
+    if (e.target !== lightboxImg) {
+      closeLightbox();
+    }
+  });
+
+  // ESC key close
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") {
+      closeLightbox();
+    }
+  });
+
+  function closeLightbox() {
+    lightbox.classList.remove("active");
+    lightboxImg.src = "";
+    document.body.style.overflow = "auto";
+  }
+    </script>
+  </body>
+</html>
